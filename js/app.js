@@ -6,7 +6,7 @@ const contenedorRtas = selector('#botons');
 const vidasUI = selector('#vidas-usuario');
 const body = selector('#body');
 
-let vidasUsuario = 1;
+let vidasUsuario = 8;
 
 
 // Clases
