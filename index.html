@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@300&family=Concert+One&family=Dosis:wght@200&family=Montserrat:wght@300&family=Nunito&family=Permanent+Marker&family=Quicksand&family=Titan+One&display=swap" rel="stylesheet">
+    <title>Desafio DOM</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo" data-aos="fade-down">
+                <a href="#"><img src="images/Trivia(1).svg" alt="logo" class="imagen-logo"></a>
+            </div> 
+            <div class="contenedor-vidas">
+                <div class="fondo-vida">
+                    <div class="vidas" id="vidas-usuario">
+                        <img src="/images/corazon.png" class="corazon">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="contenido">
+        <div class="pregunta" id="contenedor-preguntas">
+            
+        </div>
+        <div class="botons" id="botons">
+            
+        </div>
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 700,
+            duration: 800
+        });
+    </script>
+
+</body>
+</html>

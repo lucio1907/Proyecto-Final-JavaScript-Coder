@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-image: url("./images/Planetas.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header {
+    background-color: #302a58;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    box-shadow: 1px 0px 10px;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+header .logo .imagen-logo {
+    width: 230px;
+    height: 170px;
+    margin-top: -2.062rem;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+header .logo .imagen-logo:hover {
+    transform: scale(1.10);
+}
+
+header .vidas {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    position: absolute;
+    top: .2rem;
+}
+
+header .vidas .vida-usuario {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 114px;
+    font-size: 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Concert One', cursive;
+    color: #e9e9ed;
+}
+
+.corazon {
+    width: 60px;
+    margin-right: 8%;
+}
+
+header .contenedor-vidas {
+    height: 60px;
+    margin-top: -12.3vh;
+    display: flex;
+    justify-content: end;
+}
+
+.fondo-vida {
+    background-color: #0000001f;
+    height: 6.5vh;
+    width: 9%;
+    display: flex;
+    position: relative;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+h1 {
+    font-family: 'Baloo 2', cursive;
+    position: absolute;
+    top: 22%;
+}
+
+.contenido {
+    width: 100vw;
+    height: 70vh;
+}
+
+.pregunta {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 171, 8);
+    margin-top: 7%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    box-shadow: 0px 1px 20px 0px #3a0070;
+}
+
+.botons {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 5.25rem;
+    gap: 35px;
+}
+
+.botons .botones {
+    height: 4vh;
+}
+
+.botones-value {
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: 0px 2px 0px 0px rgb(161, 154, 154);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.botones-value-seleccionado {
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: 0px 2px 0px 0px rgb(26, 24, 24);
+    transition: all 0.6s;
+}
+
+.color-verde {
+    background-color: #28b62c;
+}
+
+.color-rojo {
+    background-color: #ff4136;;
+}
+
+.opacity {
+    opacity: 0.6;
+}
+
+.opacity2 {
+    opacity: 1;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+}
+
+@media screen and (max-width: 1130px) {
+    .contenido .pregunta {
+        margin-top: 11%;
+    }
+
+    .botons {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .contenido .pregunta {
+        height: 34%;
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    body {
+        height: 90vh;
+    }
+
+    .contenido .pregunta {
+        margin-top: 19%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenido .pregunta {
+        margin-top: 23%;
+    }
+
+    .botons {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contenido .pregunta {
+        margin-top: 26%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        height: 70vh;
+    }
+
+    .contenido .pregunta {
+        margin-top: 30%;
+    }
+
+    .pregunta p {
+        font-size: 19px;
+    }
+}
