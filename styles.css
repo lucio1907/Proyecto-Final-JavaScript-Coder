@@ -162,6 +162,58 @@ h1 {
     font-family: 'Comfortaa', cursive;
 }
 
+.cartel-terminado {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgb(247, 171, 8);
+}
+
+.parrafo-gameover {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.boton-jugar {
+    --bg: #e74c3c;
+    --text-color: #fff;
+    position: relative;
+    width: 150px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: #c0392b 0px 7px 2px, #000 0px 8px 5px;
+  }
+  
+  .boton-jugar:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  .boton-jugar:active {
+    box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
+  }
+
+  .posicion-boton {
+    position: absolute;
+    bottom: 31.5%;
+    left: 43.8%;
+  }
+
 @media screen and (max-width: 1130px) {
     .contenido .pregunta {
         margin-top: 11%;

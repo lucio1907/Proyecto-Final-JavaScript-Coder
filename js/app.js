@@ -4,8 +4,9 @@ import { data } from "./classes/variables.js";
 const pregunta = selector('#contenedor-preguntas');
 const contenedorRtas = selector('#botons');
 const vidasUI = selector('#vidas-usuario');
+const body = selector('#body');
 
-let vidasUsuario = 8;
+let vidasUsuario = 1;
 
 
 // Clases
@@ -143,6 +144,40 @@ class UI {
         borrarNumero.remove();
       }, 2500);
     }
+
+    // Valida vidas que no sea menor a 0
+    if (vidasUsuario <= 0) {
+      this.mostrarCartelTerminado();
+    }
+  }
+
+  mostrarCartelTerminado() {
+    const cartel = document.createElement('div');
+    cartel.setAttribute('class', 'cartel-terminado');
+    cartel.innerHTML = `
+      <div class="parrafo-gameover">
+        <p>¡Juego terminado!</p>
+      </div>
+      `;
+      
+      const botonJugar = document.createElement('button')
+      botonJugar.setAttribute('id','btn-jugar');
+      botonJugar.setAttribute('class', 'boton-jugar posicion-boton');
+      botonJugar.textContent = 'Juega de nuevo!';
+      cartel.append(botonJugar)
+
+      // Evento de boton
+      botonJugar.addEventListener('click', () => {
+        setTimeout(() => { 
+          cartel.remove()
+        }, 700);
+      })
+    
+    setTimeout(() => {
+      body.append(cartel);
+      // Reinicia la vida
+      vidasUsuario = 8; 
+    }, 2500);
   }
 
   // Limpia el HTML para que no se repitan valores
