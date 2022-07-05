@@ -44,10 +44,7 @@ class UI {
     botones4.value = btn4;
 
     // Agrega al HTML los botones
-    contenedorRtas.append(botones1);
-    contenedorRtas.append(botones2);
-    contenedorRtas.append(botones3);
-    contenedorRtas.append(botones4);
+    contenedorRtas.append(botones1, botones2, botones3, botones4);
     
     // Eventos
     botones1.addEventListener('click', () => {
