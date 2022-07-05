@@ -42,15 +42,13 @@ header .vidas {
     display: flex;
     width: 100%;
     justify-content: end;
-    position: absolute;
-    top: .2rem;
 }
 
 header .vidas .vida-usuario {
     display: flex;
     align-items: center;
     position: relative;
-    right: 114px;
+    right: 7.12rem;
     font-size: 38px;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Concert One', cursive;
@@ -75,6 +73,7 @@ header .contenedor-vidas {
     width: 9%;
     display: flex;
     position: relative;
+    bottom: 0.43rem;
     margin-right: 10px;
     border-radius: 7px;
 }
