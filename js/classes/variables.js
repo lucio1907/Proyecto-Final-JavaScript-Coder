@@ -198,7 +198,7 @@ export const data = [
     {
       texto: '¿De qué nacionalidad es el artista El Alfa?',
       respuestas: ['Puerto Rico', 'España', 'República Dominicana', 'Colombia'],
-      correcta: 'Reoública Dominicana'
+      correcta: 'República Dominicana'
     },
     {
       texto: '¿Cuál es la canción con más reproducciones de Paulo Londra?',

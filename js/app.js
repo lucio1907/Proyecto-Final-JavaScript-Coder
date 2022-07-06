@@ -8,7 +8,6 @@ const body = selector('#body');
 
 let vidasUsuario = 8;
 
-
 // Clases
 class UI {
   // Imprime las preguntas en el HTML
@@ -50,6 +49,9 @@ class UI {
     botones1.addEventListener('click', () => {
         this.esCorrecta(botones1);
         if (botones1) {
+          botones1.disabled = true;
+          // Agrego color a los valores de los inputs para mayor efecto a los inputs
+          botones1.style.color = '#000';
           botones2.disabled = true;
           botones3.disabled = true;
           botones4.disabled = true;
@@ -60,6 +62,9 @@ class UI {
       this.esCorrecta(botones2);
       if (botones2) {
           botones1.disabled = true;
+          botones2.disabled = true;
+          // Agrego color a los valores de los inputs para mayor efecto a los inputs
+          botones2.style.color = '#000';
           botones3.disabled = true;
           botones4.disabled = true;
       }
@@ -70,6 +75,9 @@ class UI {
       if (botones3) {
         botones1.disabled = true;
         botones2.disabled = true;
+        botones3.disabled = true
+        // Agrego color a los valores de los inputs para mayor efecto a los inputs
+        botones3.style.color = '#000';
         botones4.disabled = true;
       }
     });
@@ -80,6 +88,9 @@ class UI {
         botones1.disabled = true;
         botones2.disabled = true;
         botones3.disabled = true;
+        botones4.disabled = true
+        // Agrego color a los valores de los inputs para mayor efecto a los inputs
+        botones4.style.color = '#000';
       }
     });
     
@@ -95,22 +106,25 @@ class UI {
       const borrarNumeroCorrecta = selector('.vida-usuario');
       setTimeout(() => {
         borrarNumeroCorrecta.remove();
-      }, 2500);
+      }, 3000);
 
       // Limpia HTML
       setTimeout(() => {
         this.limpiarHTML(contenedorRtas);
         preguntaAleatoria();
         contenedorRtas.classList.remove('opacity');
-      }, 2500);
+      }, 3000);
     } else {
 
       // Agrega color al boton
       opcion.classList.add('botones-value-seleccionado', 'color-rojo');
+
+      // Scripting
       const parrafo = document.createElement('p');
-      parrafo.classList.add('botones-value-seleccionado', 'color-verde', 'uppercase');
+      parrafo.classList.add('cartel-incorrecto', 'color-rojo', 'uppercase');
       parrafo.innerText = `La respuesta correcta es: "${preguntaAleatorias.correcta}"`;
       contenedorRtas.appendChild(parrafo);
+    
 
       // Restar vidas y limpiar HTML
       this.restarVidas(opcion, preguntaAleatorias);
@@ -119,7 +133,7 @@ class UI {
         this.limpiarHTML(contenedorRtas);
         contenedorRtas.classList.remove('opacity');
         preguntaAleatoria();
-      }, 2500);
+      }, 3500);
 
     }
   } 
@@ -139,7 +153,7 @@ class UI {
       const borrarNumero = selector('.vida-usuario');
       setTimeout(() => {
         borrarNumero.remove();
-      }, 2500);
+      }, 3500);
     }
 
     // Valida vidas que no sea menor a 0
