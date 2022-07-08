@@ -147,6 +147,31 @@ h1 {
     transition: all 0.6s;
 }
 
+.contenedor-nombre-usuario {
+    display: flex;
+    height: 0;
+    position: absolute;
+    margin-top: 2.5rem;
+    margin-left: 0.93rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: #fff;
+}
+
+.fondo-usuario {
+    background: url('./images/dragon-scales.png');
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vw;
+}
+
+/* .letra-usuario {
+
+} */
+
 .color-verde {
     background-color: #28b62c;
 }
@@ -184,9 +209,33 @@ h1 {
 }
 
 .contenedor {
-    width: 90%;
-    margin: 15px auto;
+    width: 30%;
+    margin: 0px auto;
     border-radius: 3px;
+    margin-top: 11rem;
+}
+
+.contenedor .animacion-letra {
+    animation: spinner 1.5s infinite ease-in;
+}
+
+@keyframes spinner {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.contenedor2 {
+    width: 30%;
+    margin: 0px auto;
+    border-radius: 3px;
+    margin-top: 11rem;
 }
 
 .cartel-terminado {
@@ -241,6 +290,10 @@ h1 {
     left: 45.8%;
   }
 
+  .contenedor-juegos {
+    margin-top: 13rem;
+  }
+
   .cartel-incorrecto {
     display: flex;
     width: 50%;
@@ -255,21 +308,34 @@ h1 {
     animation: bounce .8s ease-in-out;
   }
 
+  @keyframes bounce {
+    0% {
+        transform: scale(.15);
+        filter: blur(2px);
+    }
+    50%{
+        filter: blur(1px);
+    }
+    100% {
+        filter: blur(0);
+        transform: translate(0);
+    }
+  }
+
   .contenedor-usuarios {
     width: 30%;
-    height: 50vh;
+    height: 60vh;
     background-color: #302a58;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 8%;
     border-radius: 6px;
   }
 
   .inicia {
     color: aliceblue;
     font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    top: 45%;
-    right: 44.75%;
+    position: relative;
+    bottom: 3rem;
   }
 
   .contenedor-inputs {
@@ -278,7 +344,14 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+  }
+
+  .contenedor-inputs .advertencia {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: justify;
+    
   }
 
   .contenedor-inputs input {
@@ -289,6 +362,7 @@ h1 {
     border-radius: 4px;
     color: #fff;
     background-color: #000;
+    margin-top: 3rem;
   }
 
   .contenedor-inputs input:focus {
@@ -302,11 +376,9 @@ h1 {
   }
 
   .contenedor-botones {
-    position: absolute;
-    top: 64.8%;
-    right: 39.5%;
+    margin: -6.4rem auto;
     display: flex;
-    width: 21%;
+    width: 20%;
   }
 
   .boton-ingresar {
@@ -327,7 +399,7 @@ h1 {
     align-items: center;
     gap: 0.6em;
     font-weight: bold;
-    margin: 0 auto;
+    margin: auto;
     cursor: pointer;
     justify-content: center;
   }
@@ -373,19 +445,7 @@ h1 {
     right: 0;
   }
 
-  @keyframes bounce {
-    0% {
-        transform: scale(.15);
-        filter: blur(2px);
-    }
-    50%{
-        filter: blur(1px);
-    }
-    100% {
-        filter: blur(0);
-        transform: translate(0);
-    }
-  }
+  /* Media queries */
 
 @media screen and (max-width: 1130px) {
     .contenido .pregunta {

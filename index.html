@@ -8,10 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@300&family=Concert+One&family=Dosis:wght@200&family=Fredoka+One&family=Montserrat:wght@300&family=Nunito&family=Permanent+Marker&family=Press+Start+2P&family=Quicksand&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@300&family=Concert+One&family=Dosis:wght@200&family=Fredoka+One&family=Montserrat:wght@300&family=Nunito&family=Permanent+Marker&family=Press+Start+2P&family=Quicksand&family=Titan+One&display=swap" rel="stylesheet"/>
     <title>Trivia Track</title>
   </head>
   <body id="body">
@@ -35,6 +32,9 @@
     <div id="usuarios" class="contenedor-usuarios">
       <form id="formulario" class="contenedor-inputs">
         <h2 class="inicia">¡Ingresa al juego!</h2>
+        <p class="advertencia">Para poder ingresar necesitas ingresar un usuario válido</p>
+        <p class="advertencia">NO se permiten solo números como usuario.</p>
+        <p class="advertencia">Debes ingresar un usuario con más de 6 carácteres.</p>
         <input id="inputUsuario" type="text" placeholder="Ingresa un nombre de usuario" />
       </div>
       <div class="contenedor-botones">
@@ -46,15 +46,21 @@
         </button>
       </form>
     </div>
+    <div id="alertas">
+          
+    </div>
 
-    <div id="contenedorJuegos">
+    <div id="contenedorJuegos" class="contenedor-juegos">
+      <div id="nombreUsuario" class="contenedor-nombre-usuario">
+        
+      </div>
       <div class="contenido">
         <div class="pregunta" id="contenedor-preguntas"></div>
         <div class="botons" id="botons"></div>
       </div>
     </div>
 
-    <script src="js/iniciosesion.js"></script>
+    <script src="js/iniciosesion.js" type="module"></script>
     <script src="js/app.js" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

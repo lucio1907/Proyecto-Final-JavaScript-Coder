@@ -210,10 +210,10 @@ let preguntaAleatorias;
 preguntaAleatoria()
 function preguntaAleatoria() {
   preguntaAleatorias = nuevasPreguntas[Math.floor(Math.random() * nuevasPreguntas.length)];
-
+ 
   // Crear parrafo con la pregunta
   const parrafo = document.createElement("p");
-  
+
   // Imprimir preguntas
   ui.imprimirPregunta(parrafo, preguntaAleatorias);
   
