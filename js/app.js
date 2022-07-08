@@ -89,7 +89,7 @@ class UI {
         botones2.disabled = true;
         botones3.disabled = true;
         botones4.disabled = true
-        // Agrego color a los valores de los inputs para mayor efecto a los inputs
+        // Agrego color a los valores de los inputs para mayor efecto a los input
         botones4.style.color = '#000';
       }
     });
