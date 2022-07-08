@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 header {
@@ -63,6 +64,7 @@ header .vidas .vida-usuario {
 header .contenedor-vidas {
     height: 60px;
     margin-top: -12.3vh;
+    margin-right: 1.25rem;
     display: flex;
     justify-content: end;
 }
@@ -167,6 +169,25 @@ h1 {
     font-family: 'Fredoka One', cursive;
 }
 
+.uppercase2 {
+    text-transform: uppercase;
+    font-size: 21px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.alertas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 15px auto;
+    border-radius: 3px;
+}
+
 .cartel-terminado {
     width: 100vw;
     height: 100vh;
@@ -231,6 +252,124 @@ h1 {
     filter: contrast(120%);
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.753);
     animation: bounce .8s ease-in-out;
+  }
+
+  .contenedor-usuarios {
+    width: 30%;
+    height: 50vh;
+    background-color: #302a58;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 6px;
+  }
+
+  .inicia {
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 45%;
+    right: 44.75%;
+  }
+
+  .contenedor-inputs {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contenedor-inputs input {
+    width: 20vw;
+    height: 40px;
+    display: flex;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #000;
+  }
+
+  .contenedor-inputs input:focus {
+    outline: none;
+    opacity: .7;
+    background-color: #000;
+  }
+
+  input::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  .contenedor-botones {
+    position: absolute;
+    top: 64.8%;
+    right: 39.5%;
+    display: flex;
+    width: 21%;
+  }
+
+  .boton-ingresar {
+    --primary-color: #28b62c;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    width: 165px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+    justify-content: center;
+  }
+  
+  .boton-ingresar .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .boton-ingresar .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  .boton-ingresar .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  .boton-ingresar:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .boton-ingresar:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  .boton-ingresar:hover .arrow:before {
+    right: 0;
   }
 
   @keyframes bounce {

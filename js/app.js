@@ -1,4 +1,4 @@
-import { data } from "./classes/variables.js";
+import { data } from "./classes/preguntas.js";
 
 // Variables
 const pregunta = selector('#contenedor-preguntas');
