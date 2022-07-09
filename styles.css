@@ -484,6 +484,10 @@ h1 {
     .fondo-vida {
         width: 14.3vw;
     }
+
+    .cartel-incorrecto {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 940px) {
@@ -515,6 +519,14 @@ h1 {
     }
 }
 
+@media screen and (max-width: 814px) {
+    .cartel-incorrecto {
+        width: 60%;
+        height: 11%;
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 794px) {
     .contenedor-usuarios {
         width: 70vw;
@@ -543,6 +555,13 @@ h1 {
     }
 }
 
+@media screen and (max-width: 679px) {
+    .cartel-incorrecto {
+        font-size: 18px;
+        margin-top: -130px;
+    }
+}
+
 @media screen and (max-width: 637px) {
     .contenedor-usuarios {
         width: 80vw;
@@ -555,6 +574,14 @@ h1 {
     .contenedor {
         width: 70vw;
     }
+
+    
+}
+
+@media screen and (max-width: 612px) {
+    .cartel-incorrecto {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -563,6 +590,10 @@ h1 {
     }
 
     .botons {
+        width: 80%;
+    }
+
+    .cartel-incorrecto {
         width: 80%;
     }
 }
@@ -633,14 +664,29 @@ h1 {
 }
 
 @media screen and (max-width: 464px) {
+    .cartel-incorrecto {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 464px) {
     .advertencia {
         font-size: 15px;
+    }
+
+    .cartel-incorrecto {
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 435px) {
     .advertencia {
         font-size: 13px;
+    }
+
+    .cartel-incorrecto {
+        font-size: 14px;
+        height: 10%;
     }
 }
 
@@ -671,5 +717,41 @@ h1 {
 
     .pregunta p {
         font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .cartel-incorrecto {
+        font-size: 13px;
+        margin-top: -11.75rem;
+    }
+
+    .contenido .pregunta {
+        margin-top: 42%;
+    }
+
+    .pregunta p {
+        font-size: 16px;
+    }
+
+    .botons {
+        margin-top: 15vh;
+    }
+
+    .fondo-usuario {
+        width: 90vw;
+        border-radius: 50px;
+    }
+    
+    .letra-usuario {
+        font-size: 18px;
+    }
+
+    .corazon {
+        margin-right: -20%;
+    }
+
+    .vidas .vida-usuario {
+        right: 3.2rem;
     }
 }
