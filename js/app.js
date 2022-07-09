@@ -7,6 +7,7 @@ const vidasUI = selector('#vidas-usuario');
 const body = selector('#body');
 
 let vidasUsuario = 8;
+let puntaje = 0;
 
 // Clases
 class UI {
@@ -102,6 +103,9 @@ class UI {
       // Agrega color al boton
       opcion.classList.add('botones-value-seleccionado', 'color-verde');
 
+      // Creo los puntos
+      
+
       // Selecciono el numero del metodo vidas() y limpio el HTML
       const borrarNumeroCorrecta = selector('.vida-usuario');
       setTimeout(() => {
@@ -114,6 +118,7 @@ class UI {
         preguntaAleatoria();
         contenedorRtas.classList.remove('opacity');
       }, 3000);
+
     } else {
 
       // Agrega color al boton
