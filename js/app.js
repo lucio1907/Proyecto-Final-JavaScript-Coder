@@ -174,10 +174,12 @@ class UI {
       }, 3500);
     }
 
-    // Valida vidas que no sea menor a 0
+    // Valida vidas que no sea menor a 0 y reinicia localStorage
     if (vidasUsuario <= 0) {
       vidasUsuario = 8;
       localStorage.setItem('vidas', vidasUsuario);
+      puntaje = 0;
+      localStorage.setItem('puntajes', puntaje)
       this.mostrarCartelTerminado();
     }
   }
@@ -191,7 +193,7 @@ class UI {
       </div>
       `;
       
-      const botonJugar = document.createElement('button')
+      const botonJugar = document.createElement('button');
       botonJugar.setAttribute('id','btn-jugar');
       botonJugar.setAttribute('class', 'boton-jugar posicion-boton');
       botonJugar.textContent = 'Juega de nuevo!';

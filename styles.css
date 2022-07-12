@@ -417,19 +417,6 @@ h1 {
     margin: auto;
     cursor: pointer;
     justify-content: center;
-    animation: agrandar 2s infinite ease-in-out;
-  }
-
-  @keyframes agrandar {
-    0%{
-        font-family: 'Montserrat', sans-serif;
-    }
-    50%{
-        font-family: 'Press Start 2P', cursive;
-    }
-    100%{
-        font-family: 'Montserrat', sans-serif;
-    }
   }
   
   .boton-ingresar .arrow-wrapper {
