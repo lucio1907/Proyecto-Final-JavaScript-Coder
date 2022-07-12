@@ -5,9 +5,10 @@ const pregunta = selector('#contenedor-preguntas');
 const contenedorRtas = selector('#botons');
 const vidasUI = selector('#vidas-usuario');
 const body = selector('#body');
+const puntosTotales = selector('#puntosTotales');
 
-let vidasUsuario = 8;
-let puntaje = 0;
+let vidasUsuario = 8
+let puntaje = localStorage.getItem('puntajes');
 
 // Clases
 class UI {
@@ -103,8 +104,9 @@ class UI {
       // Agrega color al boton
       opcion.classList.add('botones-value-seleccionado', 'color-verde');
 
-      // Creo los puntos
-      
+      // Sumo en caso de que sea correcta
+      puntaje += 10;
+      localStorage.setItem('puntajes', puntaje);
 
       // Selecciono el numero del metodo vidas() y limpio el HTML
       const borrarNumeroCorrecta = selector('.vida-usuario');
@@ -124,6 +126,10 @@ class UI {
       // Agrega color al boton
       opcion.classList.add('botones-value-seleccionado', 'color-rojo');
 
+      // Resto en caso de que sea incorrecta
+      puntaje -= 10;
+      localStorage.setItem('puntajes', puntaje);
+
       // Scripting
       const parrafo = document.createElement('p');
       parrafo.classList.add('cartel-incorrecto', 'color-rojo', 'uppercase');
@@ -139,6 +145,12 @@ class UI {
         contenedorRtas.classList.remove('opacity');
         preguntaAleatoria();
       }, 3500);
+
+      // Valido puntajes
+      if (puntaje <= 0) {
+        puntaje = 0;
+        localStorage.setItem('puntajes', puntaje)
+      }
 
     }
   } 
@@ -196,6 +208,14 @@ class UI {
     }, 2500);
   }
 
+  imprimirPuntaje() {
+    const puntos = document.createElement('p');
+    puntos.textContent = `Tienes ${puntaje} Pts.`;
+
+    this.limpiarHTML(puntosTotales);
+    puntosTotales.append(puntos);
+  }
+
   // Limpia el HTML para que no se repitan valores
   limpiarHTML(elemento) {
     while (elemento.firstChild) {
@@ -227,6 +247,8 @@ function preguntaAleatoria() {
 
   // Imprime las vidas
   ui.vidas();
+
+  ui.imprimirPuntaje();
 }
 
 function selector(param) {

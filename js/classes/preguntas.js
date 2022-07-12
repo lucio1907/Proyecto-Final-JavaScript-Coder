@@ -224,5 +224,25 @@ export const data = [
       texto: '¿Cuál era la guitarra principal de Gustavo Cerati?',
       respuestas: ['Fender Stratocaster', 'Gibson SG', 'PRS Multifoil 1988', 'Gibson Les Paul'],
       correcta: 'PRS Multifoil 1988'
+    },
+    {
+      texto: '¿Cuántos mundiales tiene Alemania?',
+      respuestas: ['5', '2', '3', '4'],
+      correcta: '4'
+    },
+    {
+      texto: 'Según los niveles de inglés de la tabla Europea, ¿Cuál es el nivel intermedio?',
+      respuestas: ['C1, C2', 'A1, A2', 'B1, B2', 'D1, D2'],
+      correcta: 'B1, B2'
+    },
+    {
+      texto: '¿En qué año falleció Carlos Gardel?',
+      respuestas: ['21 de Julio del 1920', '10 de Agosto de 1935', '24 de Junio de 1935', '13 de Septiembre de 1940'],
+      correcta: '24 de Junio de 1935'
+    },
+    {
+      texto: '¿Cuántos años tiene la Reina Isabel?',
+      respuestas: ['98', '92', '96', '94'],
+      correcta: '96'
     }
   ];

@@ -32,10 +32,11 @@
     <div id="usuarios" class="contenedor-usuarios">
       <form id="formulario" class="contenedor-inputs">
         <h2 class="inicia">¡Ingresa al juego!</h2>
-        <p class="advertencia">Para poder ingresar necesitas ingresar un usuario válido</p>
-        <p class="advertencia">NO se permiten solo números como usuario.</p>
-        <p class="advertencia">Debes ingresar un usuario con más de 6 carácteres.</p>
-        <input id="inputUsuario" type="text" placeholder="Ingresa un nombre de usuario" />
+        <p class="advertencia">¡Ingresa al mejor juego de preguntas y respuestas!</p>
+        <p class="advertencia">Tienes 8 vidas en total, por lo cual si fallas se te restará una.</p>
+        <p class="advertencia">¡Las vidas se regeneran una hora y media!</p>
+        <p class="advertencia">Por cada respuesta correcta obtienes 10 puntos</p>
+        <p class="advertencia">¡Dale a ingresar para empezar a jugar!</p>
       </div>
       <div class="contenedor-botones">
         <button id="botonIngresar" class="boton-ingresar">
@@ -52,7 +53,10 @@
 
     <div id="contenedorJuegos" class="contenedor-juegos">
       <div id="nombreUsuario" class="contenedor-nombre-usuario">
-        
+
+      </div>
+      <div id="puntosTotales" class="puntaje">
+            
       </div>
       <div class="contenido">
         <div class="pregunta" id="contenedor-preguntas"></div>
@@ -60,7 +64,7 @@
       </div>
     </div>
 
-    <script src="js/iniciosesion.js" type="module"></script>
+    <script src="js/iniciosesion.js"></script>
     <script src="js/app.js" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
