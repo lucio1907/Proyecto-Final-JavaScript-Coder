@@ -7,7 +7,7 @@ const vidasUI = selector('#vidas-usuario');
 const body = selector('#body');
 const puntosTotales = selector('#puntosTotales');
 
-let vidasUsuario = 8
+let vidasUsuario = localStorage.getItem('vidas')
 let puntaje = localStorage.getItem('puntajes');
 
 // Clases
@@ -167,6 +167,7 @@ class UI {
   restarVidas(param1, param2) {
     if (param1.value !== param2.correcta) {
       vidasUsuario--;
+      localStorage.setItem('vidas', vidasUsuario);
       const borrarNumero = selector('.vida-usuario');
       setTimeout(() => {
         borrarNumero.remove();
@@ -175,6 +176,8 @@ class UI {
 
     // Valida vidas que no sea menor a 0
     if (vidasUsuario <= 0) {
+      vidasUsuario = 8;
+      localStorage.setItem('vidas', vidasUsuario);
       this.mostrarCartelTerminado();
     }
   }
