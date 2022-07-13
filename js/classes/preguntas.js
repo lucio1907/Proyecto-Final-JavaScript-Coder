@@ -141,14 +141,14 @@ export const data = [
       correcta: 'Isaac Newton'
     },
     {
-      texto: '¿Cuál de estas notas no tiene sostenido?',
+      texto: '¿Cuál de estas notas NO tiene sostenido?',
       respuestas: ['Sol', 'Re', 'Fa', 'Mi'],
       correcta: 'Mi'
     },
     {
       texto: '¿Cuál de estas notebooks pertenecen a Apple?',
       respuestas: ['Del', 'Asus', 'LG', 'MacBook Pro'],
-      correcta: 'MackBook Pro'
+      correcta: 'MacBook Pro'
     },
     {
       texto: '¿Como se llama el personaje principal femenino de Stranger Things?',
@@ -244,5 +244,30 @@ export const data = [
       texto: '¿Cuántos años tiene la Reina Isabel?',
       respuestas: ['98', '92', '96', '94'],
       correcta: '96'
+    },
+    {
+      texto: '¿Cómo se llama el personaje principal de la serie Sex Education?',
+      respuestas: ['Otis', 'Eric', 'Adam', 'Maeve'],
+      correcta: 'Otis'
+    },
+    {
+      texto: '¿En qué película de Harry Potter resurge Voldermort?',
+      respuestas: ['The goblet of fire', 'The chamber of secrets', 'The order of phoenix', 'Deathly Hallows'],
+      correcta: 'The goblet of fire'
+    },
+    {
+      texto: 'En la actualidad, ¿Quién es la persona más rica del mundo?',
+      respuestas: ['Lionel Messi', 'Barack Obama', 'Elon Musk', 'Jeff Bezos'],
+      correcta: 'Elon Musk'
+    },
+    {
+      texto: '¿Cuál es la distancia qué hay entre la luna y la tierra?',
+      respuestas: ['384,400 km', '252,50 km', '150,26 km', '450,50 km'],
+      correcta: '384,400 km'
+    },
+    {
+      texto: '¿En qué año San Martín cruzó La Cordillera De Los Andes?',
+      respuestas: ['1820', '1850', '1810', '1817'],
+      correcta: '1817'
     }
   ];

@@ -6,7 +6,9 @@ const contenedorRtas = selector('#botons');
 const vidasUI = selector('#vidas-usuario');
 const body = selector('#body');
 const puntosTotales = selector('#puntosTotales');
+const btnSalirContenedor = selector('#btnSalir');
 
+// Juego
 let vidasUsuario = localStorage.getItem('vidas')
 let puntaje = localStorage.getItem('puntajes');
 
@@ -184,6 +186,23 @@ class UI {
     }
   }
 
+  botonSalir() {
+    // Crear Boton
+    btnSalirContenedor.innerHTML = `
+    <button class="btn-salir">
+      <span class="transition"></span>
+      <span class="gradient"></span>
+      <span class="label">Salir</span>
+  </button>
+  `;
+
+  btnSalirContenedor.addEventListener('click', () => {
+    setTimeout(() => {
+      window.location.reload()
+    }, 200);
+  });
+  }
+
   mostrarCartelTerminado() {
     const cartel = document.createElement('div');
     cartel.setAttribute('class', 'cartel-terminado');
@@ -254,6 +273,8 @@ function preguntaAleatoria() {
   ui.vidas();
 
   ui.imprimirPuntaje();
+
+  ui.botonSalir();
 }
 
 function selector(param) {

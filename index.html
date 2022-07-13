@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@300&family=Concert+One&family=Dosis:wght@200&family=Fredoka+One&family=Montserrat:wght@300&family=Nunito&family=Permanent+Marker&family=Press+Start+2P&family=Quicksand&family=Titan+One&display=swap" rel="stylesheet"/>
-    <title>Trivia Track</title>
-  </head>
-  <body id="body">
-    <header>
-      <nav>
-        <div class="logo" data-aos="fade-down">
-          <a href="#"
-            ><img src="images/Trivia(1).svg" alt="logo" class="imagen-logo"
-          /></a>
-        </div>
-        <div class="contenedor-vidas">
-          <div class="fondo-vida">
-            <div class="vidas" id="vidas-usuario">
-              <img src="./images/corazon.png" class="corazon" />
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa:wght@300&family=Concert+One&family=Dosis:wght@200&family=Fredoka+One&family=Montserrat:wght@300&family=Nunito&family=Permanent+Marker&family=Press+Start+2P&family=Quicksand&family=Titan+One&display=swap" rel="stylesheet" />
+  <title>Trivia Track</title>
+</head>
+
+<body id="body">
+  <header>
+    <nav>
+      <div class="logo" data-aos="fade-down">
+        <a href="#"><img src="images/Trivia(1).svg" alt="logo" class="imagen-logo" /></a>
+      </div>
+      <div class="contenedor-vidas">
+        <div class="fondo-vida">
+          <div class="vidas" id="vidas-usuario">
+            <img src="./images/corazon.png" class="corazon" />
           </div>
         </div>
-      </nav>
-    </header>
-
-    <div id="usuarios" class="contenedor-usuarios">
-      <form id="formulario" class="contenedor-inputs">
-        <h2 class="inicia">¡Ingresa al juego!</h2>
-        <p class="advertencia">¡Ingresa al mejor juego de preguntas y respuestas!</p>
-        <p class="advertencia">Tienes 8 vidas en total, por lo cual si fallas se te restará una.</p>
-        <p class="advertencia">¡Las vidas se regeneran una hora y media!</p>
-        <p class="advertencia">Por cada respuesta correcta obtienes 10 puntos</p>
-        <p class="advertencia">¡Dale a ingresar para empezar a jugar!</p>
       </div>
-      <div class="contenedor-botones">
-        <button id="botonIngresar" class="boton-ingresar">
-          Ingresar
-          <div class="arrow-wrapper">
-            <div class="arrow"></div>
-          </div>
-        </button>
-      </form>
+    </nav>
+  </header>
+
+  <div id="usuarios" class="contenedor-usuarios">
+    <form id="formulario" class="contenedor-inputs">
+      <h2 class="inicia">¡Ingresa al juego!</h2>
+      <p class="advertencia">¡Ingresa al mejor juego de preguntas y respuestas!</p>
+      <p class="advertencia">Tienes 8 vidas en total, por lo cual si fallas se te restará una.</p>
+      <p class="advertencia">¡Las vidas se regeneran una hora y media!</p>
+      <p class="advertencia">Por cada respuesta correcta obtienes 10 puntos</p>
+      <p class="advertencia">¡Dale a ingresar para empezar a jugar!</p>
+  </div>
+  <div class="contenedor-botones">
+    <button id="botonIngresar" class="boton-ingresar">
+      Ingresar
+      <div class="arrow-wrapper">
+        <div class="arrow"></div>
+      </div>
+    </button>
+    </form>
+  </div>
+  <div id="alertas">
+
+  </div>
+
+  <div id="contenedorJuegos" class="contenedor-juegos">
+    <div id="nombreUsuario" class="contenedor-nombre-usuario">
+
     </div>
-    <div id="alertas">
-          
+    <div id="puntosTotales" class="puntaje">
+
     </div>
-
-    <div id="contenedorJuegos" class="contenedor-juegos">
-      <div id="nombreUsuario" class="contenedor-nombre-usuario">
-
-      </div>
-      <div id="puntosTotales" class="puntaje">
-            
-      </div>
-      <div class="contenido">
-        <div class="pregunta" id="contenedor-preguntas"></div>
-        <div class="botons" id="botons"></div>
-      </div>
+    <div class="contenido">
+      <div class="pregunta" id="contenedor-preguntas"></div>
+      <div class="botons" id="botons"></div>
     </div>
+    <div id="btnSalir" class="boton-salir">
 
-    <script src="js/iniciosesion.js"></script>
-    <script src="js/app.js" type="module"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        delay: 700,
-        duration: 800,
-      });
-    </script>
-  </body>
+    </div>
+  </div>
+
+  <script src="js/iniciosesion.js"></script>
+  <script src="js/app.js" type="module"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 700,
+      duration: 800,
+    });
+  </script>
+</body>
+
 </html>
