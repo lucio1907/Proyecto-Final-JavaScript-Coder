@@ -10,7 +10,7 @@ const btnSalirContenedor = selector('#btnSalir');
 
 // Juego
 let vidasUsuario = localStorage.getItem('vidas')
-let puntaje = localStorage.getItem('puntajes');
+let puntaje = Number(localStorage.getItem('puntajes'));
 
 // Clases
 class UI {
