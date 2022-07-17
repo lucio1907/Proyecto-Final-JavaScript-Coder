@@ -49,7 +49,8 @@ header .vidas .vida-usuario {
     display: flex;
     align-items: center;
     position: relative;
-    right: 7.12rem;
+    right: 7.56rem;
+    top: 0.43rem;
     font-size: 38px;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Concert One', cursive;
@@ -274,7 +275,7 @@ h1 {
     border: none;
     background: var(--bg);
     color: var(--text-color);
-    padding: 1em;
+    padding: .6em;
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.2s;
@@ -282,6 +283,7 @@ h1 {
     opacity: 0.8;
     letter-spacing: 1px;
     box-shadow: #c0392b 0px 7px 2px, #000 0px 8px 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .boton-jugar:hover {
@@ -407,14 +409,14 @@ h1 {
     border: 0;
     border-radius: 20px;
     color: var(--secondary-color);
-    padding: 1em 1.8em;
+    padding: .6em 1.8em;
     background: var(--primary-color);
     display: flex;
     transition: 0.2s background;
     align-items: center;
     gap: 0.6em;
     font-weight: bold;
-    margin: auto;
+    margin: 1.25rem auto;
     cursor: pointer;
     justify-content: center;
   }

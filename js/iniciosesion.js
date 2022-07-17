@@ -15,22 +15,40 @@ function eventsListeners() {
     contenedorJuegos.style.display = "none";
   });
 
-  btnIngresar.addEventListener('click', () => {
-    btnIngresar.disabled = true;
-    btnIngresar.classList.add('opacity')
-    mostrarAlerta("Ingresando...");
-    // Inserto al HTML el juego y borro el formulario
-    setTimeout(() => {
-      contenedorUsuarios.remove();
-      btnIngresar.remove();
-      contenedorJuegos.style.display = "flex";
-    }, 4000);
-  });
+  btnIngresar.addEventListener('click', ingresarAlJuego);
 
   formulario.addEventListener("submit", (e) => e.preventDefault());
 }
 
 // Funciones
+
+function ingresarAlJuego() {
+  btnIngresar.disabled = true;
+  btnIngresar.classList.add('opacity')
+  
+  // Inserto al HTML el juego y borro el formulario
+  setTimeout(() => {
+    contenedorUsuarios.remove();
+    btnIngresar.remove();
+    contenedorJuegos.style.display = "flex";
+  }, 3000);
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+  })
+  
+  Toast.fire({
+    icon: 'success',
+    title: 'Ingresando correctamente',
+    margin: '20px',
+    color: '#28b62c',
+  })
+  
+}
 
 function mostrarAlerta(mensaje) {
   const alertas = selectorId("#alertas");

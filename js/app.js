@@ -18,33 +18,24 @@ class UI {
   imprimirPregunta(p, aleatoria) {
     this.limpiarHTML(pregunta);
     p.innerText = aleatoria.texto;
-    if (aleatoria) {
-      pregunta.appendChild(p);
-    }
+    // Insertar al HTML
+    aleatoria && pregunta.appendChild(p);
   }
 
   // Imprime los botones con sus valores
   imprimirBotones(btn1, btn2, btn3, btn4) {
     // Se crea el elemento boton
     const botones1 = document.createElement('button');
-    botones1.classList.add('botones-value');
-    botones1.innerText = btn1;
-    botones1.value = btn1;
+    this.valoresBotones(botones1, btn1)
     
     const botones2 = document.createElement('button');
-    botones2.classList.add('botones-value');
-    botones2.innerText = btn2;
-    botones2.value = btn2;
+    this.valoresBotones(botones2, btn2)
 
     const botones3 = document.createElement('button');
-    botones3.classList.add('botones-value');
-    botones3.innerText = btn3;
-    botones3.value = btn3;
+    this.valoresBotones(botones3, btn3);
 
     const botones4 = document.createElement('button');
-    botones4.classList.add('botones-value');
-    botones4.innerText = btn4;
-    botones4.value = btn4;
+    this.valoresBotones(botones4, btn4)
 
     // Agrega al HTML los botones
     contenedorRtas.append(botones1, botones2, botones3, botones4);
@@ -99,6 +90,12 @@ class UI {
     });
     
   }
+
+  valoresBotones(boton, valor) {
+    boton.classList.add('botones-value');
+    boton.innerText = valor;
+    boton.value = valor;
+}
 
   // Valida que la pregunta sea correcta o incorrecto
   esCorrecta(opcion) {
@@ -193,8 +190,8 @@ class UI {
       <span class="transition"></span>
       <span class="gradient"></span>
       <span class="label">Salir</span>
-  </button>
-  `;
+    </button>
+    `;
 
   btnSalirContenedor.addEventListener('click', () => {
     setTimeout(() => {
@@ -272,8 +269,10 @@ function preguntaAleatoria() {
   // Imprime las vidas
   ui.vidas();
 
+  // Imprime puntaje
   ui.imprimirPuntaje();
 
+  // Imprime el boton para salir
   ui.botonSalir();
 }
 
