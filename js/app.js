@@ -9,7 +9,7 @@ const puntosTotales = selector('#puntosTotales');
 const btnSalirContenedor = selector('#btnSalir');
 
 // Juego
-let vidasUsuario = localStorage.getItem('vidas')
+let vidasUsuario = localStorage.getItem('vidas');
 let puntaje = Number(localStorage.getItem('puntajes'));
 
 // Clases
