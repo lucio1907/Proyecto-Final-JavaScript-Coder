@@ -1,5 +1,3 @@
-import { data } from "./classes/preguntas.js";
-
 // Variables
 const pregunta = selector('#contenedor-preguntas');
 const contenedorRtas = selector('#botons');
@@ -99,7 +97,7 @@ class UI {
 
   // Valida que la pregunta sea correcta o incorrecto
   esCorrecta(opcion) {
-    if (opcion.value === preguntaAleatorias.correcta) {
+    if (opcion.value === aleatoria.correcta) {
       // Agrega color al boton
       opcion.classList.add('botones-value-seleccionado', 'color-verde');
 
@@ -132,12 +130,12 @@ class UI {
       // Scripting
       const parrafo = document.createElement('p');
       parrafo.classList.add('cartel-incorrecto', 'color-rojo', 'uppercase');
-      parrafo.innerText = `La respuesta correcta es: "${preguntaAleatorias.correcta}"`;
+      parrafo.innerText = `La respuesta correcta es: "${aleatoria.correcta}"`;
       contenedorRtas.appendChild(parrafo);
     
 
       // Restar vidas y limpiar HTML
-      this.restarVidas(opcion, preguntaAleatorias);
+      this.restarVidas(opcion, aleatoria);
 
       setTimeout(() => {
         this.limpiarHTML(contenedorRtas);
@@ -248,23 +246,30 @@ class UI {
 // Instanciar
 const ui = new UI();
 
-// Preguntas sacadas de la base 
-const nuevasPreguntas = data.filter(preg => {return preg.texto, preg.respuestas, preg.correcta});
-let preguntaAleatorias;
+let aleatoria;
 
 // Funciones
 preguntaAleatoria()
-function preguntaAleatoria() {
-  preguntaAleatorias = nuevasPreguntas[Math.floor(Math.random() * nuevasPreguntas.length)];
+async function preguntaAleatoria() {
+  // Preguntas sacadas de la base 
+  const url = await fetch("preguntas.json");
+
+  const data = await url.json();
+
+  const preguntas = data.filter((preg) => {
+      return preg.texto, preg.respuesta, preg.correcta;
+  })
+
+  aleatoria = preguntas[Math.floor(Math.random() * preguntas.length)];
  
   // Crear parrafo con la pregunta
   const parrafo = document.createElement("p");
 
   // Imprimir preguntas
-  ui.imprimirPregunta(parrafo, preguntaAleatorias);
+  ui.imprimirPregunta(parrafo, aleatoria);
   
   // Imprimir botones
-  ui.imprimirBotones(preguntaAleatorias.respuestas[0], preguntaAleatorias.respuestas[1], preguntaAleatorias.respuestas[2], preguntaAleatorias.respuestas[3]);
+  ui.imprimirBotones(aleatoria.respuestas[0], aleatoria.respuestas[1], aleatoria.respuestas[2], aleatoria.respuestas[3]);
 
   // Imprime las vidas
   ui.vidas();
