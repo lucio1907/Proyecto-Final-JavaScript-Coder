@@ -12,7 +12,6 @@ const formulario = selectorId("#formulario");
 eventsListeners();
 function eventsListeners() {
   document.addEventListener("DOMContentLoaded", () => {
-    localStorage.setItem('vidas', 8)
     contenedorJuegos.style.display = "none";
   });
 
