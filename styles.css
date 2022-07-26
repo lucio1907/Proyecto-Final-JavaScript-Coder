@@ -267,6 +267,16 @@ h1 {
     font-family: 'Press Start 2P', cursive;
 }
 
+.span-cartel {
+    display: flex;
+    position: absolute;
+    margin-top: 7.18rem;
+}
+
+.span-cartel:nth-child(2) {
+    margin-top: 15.68rem;
+}
+
 .boton-jugar {
     --bg: #e74c3c;
     --text-color: #fff;
@@ -298,7 +308,7 @@ h1 {
 
   .posicion-boton {
     position: absolute;
-    bottom: 31.5%;
+    bottom: 23.5%;
     left: 45.8%;
   }
 

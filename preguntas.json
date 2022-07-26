@@ -407,7 +407,7 @@
           "Autoretrato de Durero",
           "Muerte de la virgen"
       ],
-      "correcta": "PRS Multifoil 1988"
+      "correcta": "Mona Lisa"
   },
   {
     "texto": "¿Como es el verdadero nombre de Eleven en Stranger Things?",
@@ -508,5 +508,104 @@
         "Oxford" 
     ],
     "correcta": "Liverpool"
+  },
+  {
+    "texto": "¿Cuántos años tiene Lionel Messi?",
+    "respuestas": [
+        "30", 
+        "34", 
+        "35", 
+        "32"
+    ],
+    "correcta": "34"
+  },{
+    "texto": "¿Quién fue Luís XIV?",
+    "respuestas": [
+        "Rey de Francia", 
+        "Rey de Europa", 
+        "Rey de España", 
+        "Rey de Paises Bajos"
+    ],
+    "correcta": "Rey de Francia"
+  },
+  {
+    "texto": "La fiebre del oro fue un período de migraciones hacia áreas rurales para explorar oro. ¿Dónde se produjo las más famosa?",
+    "respuestas": [
+        "Colorado", 
+        "California", 
+        "Texas", 
+        "Nevada"
+    ],
+    "correcta": "California"
+  },
+  {
+    "texto": "¿Quién recibió en 2009 el Premio Nobel de la Paz?",
+    "respuestas": [
+        "La Reina Isabel II", 
+        "Donald Trump", 
+        "Barack Obama", 
+        "Unión Europea"
+    ],
+    "correcta": "Barack Obama"
+  },
+  {
+    "texto": "¿Cuál es el país de Europa con mayor altitud media?",
+    "respuestas": [
+        "Suiza", 
+        "Andorra", 
+        "Inglaterra", 
+        "Noruega"
+    ],
+    "correcta": "Suiza"
+  },
+  {
+    "texto": "¿Dónde está la Tierra del Fuego?",
+    "respuestas": [
+        "Argentina", 
+        "Colombia", 
+        "Chile", 
+        "Paraguay"
+    ],
+    "correcta": "Argentina"
+  },
+  {
+    "texto": "¿Qué colores tiene la bandera de Bosnia y Herzegovina?",
+    "respuestas": [
+        "Azul, amarillo y gris", 
+        "Azul, amarillo y blanco", 
+        "Azul, verde y blanco", 
+        "Azul, rojo y negro"
+    ],
+    "correcta": "Azul, amarillo y blanco"
+  },
+  {
+    "texto": "¿En qué país se encuentra Oslo?",
+    "respuestas": [
+        "Noruega", 
+        "Dinamarca", 
+        "Países Bajos", 
+        "Islandia"
+    ],
+    "correcta": "Noruega"
+  },
+  {
+    "texto": "¿En que banda canta Anthony Kiedis?",
+    "respuestas": [
+        "Red Hot Chili Peppers", 
+        "Guns & Roses", 
+        "ACDC", 
+        "Europe"
+    ],
+    "correcta": "Red Hot Chili Peppers"
+  },
+  {
+    "texto": "¿Quién protagonizo la película 'Descubriendo nunca jamás'?",
+    "respuestas": [
+        "Johnny Deep", 
+        "Emma Watson", 
+        "Brad Pitt", 
+        "Leonardo DiCaprio"
+    ],
+    "correcta": "Johnny Deep"
   }
 ]

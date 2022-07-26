@@ -22,18 +22,22 @@ class UI {
 
   // Imprime los botones con sus valores
   imprimirBotones(btn1, btn2, btn3, btn4) {
+    // Desordenar respuestas para que vayan cambiando de lugar
+    let respuestasDesordenadas = [btn1, btn2, btn3, btn4];
+    respuestasDesordenadas.sort(() => Math.random() - 0.5);
+
     // Se crea el elemento boton
     const botones1 = document.createElement('button');
-    this.valoresBotones(botones1, btn1)
+    this.valoresBotones(botones1, respuestasDesordenadas[0])
     
     const botones2 = document.createElement('button');
-    this.valoresBotones(botones2, btn2)
+    this.valoresBotones(botones2, respuestasDesordenadas[1])
 
     const botones3 = document.createElement('button');
-    this.valoresBotones(botones3, btn3);
+    this.valoresBotones(botones3, respuestasDesordenadas[2]);
 
     const botones4 = document.createElement('button');
-    this.valoresBotones(botones4, btn4)
+    this.valoresBotones(botones4, respuestasDesordenadas[3])
 
     // Agrega al HTML los botones
     contenedorRtas.append(botones1, botones2, botones3, botones4);
@@ -175,8 +179,7 @@ class UI {
     if (vidasUsuario <= 0) {
       vidasUsuario = 8;
       localStorage.setItem('vidas', vidasUsuario);
-      puntaje = 0;
-      localStorage.setItem('puntajes', puntaje)
+      
       this.mostrarCartelTerminado();
     }
   }
@@ -204,6 +207,8 @@ class UI {
     cartel.innerHTML = `
       <div class="parrafo-gameover">
         <p>¡Juego terminado!</p>
+        <span class="span-cartel">¡Te has quedado sin vidas!</span>
+        <span class="span-cartel">¡Tu puntaje fue de ${puntaje} Pts.!</span>
       </div>
       `;
       
@@ -215,7 +220,13 @@ class UI {
 
       // Evento de boton
       botonJugar.addEventListener('click', () => {
-        setTimeout(() => { 
+        setTimeout(() => {
+          // Reinicia puntaje
+          puntaje = 0;
+          localStorage.setItem('puntajes', puntaje);
+
+          // Vuelve a imprimir el puntaje que se encuentre en el localStorage
+          this.imprimirPuntaje();
           cartel.remove()
         }, 700);
       })
