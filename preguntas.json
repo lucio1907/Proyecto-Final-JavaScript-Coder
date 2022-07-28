@@ -247,17 +247,17 @@
           "LG",
           "MacBook Pro"
       ],
-      "correcta": "MackBook Pro"
+      "correcta": "MacBook Pro"
   },
   {
       "texto": "¿Como se llama el personaje principal femenino de Stranger Things?",
       "respuestas": [
-          "Once",
+          "Eleven",
           "Nancy",
           "Robbin",
           "Max"
       ],
-      "correcta": "Once"
+      "correcta": "Eleven"
   },
   {
       "texto": "¿Qué fruta pertenece al logo de la empresa de Steve Jobs?",
@@ -607,5 +607,65 @@
         "Leonardo DiCaprio"
     ],
     "correcta": "Johnny Deep"
+  },
+  {
+    "texto": "¿Qué afición artística tenía Hitler? ",
+    "respuestas": [
+        "Pintura", 
+        "Música",
+        "Teatro", 
+        "Fotografía"
+    ],
+    "correcta": "Pintura"
+  },
+  {
+    "texto": "¿Cómo se llama el mounstruo de la temporada 4 de Stranger Things?",
+    "respuestas": [
+        "Demogorgon", 
+        "Demodog",
+        "Mind Flayer", 
+        "Vecna"
+    ],
+    "correcta": "Vecna"
+  },
+  {
+    "texto": "¿Qué nombre tiene el portátil más ligero, en peso, de Apple?",
+    "respuestas": [
+        "MacBook Air", 
+        "Ipad",
+        "MacBook Pro", 
+        "MacBook Pro M1"
+    ],
+    "correcta": "MacBook Air"
+  },
+  {
+    "texto": "¿De qué país proviene del pez dorado?",
+    "respuestas": [
+        "Corea Del Norte", 
+        "China",
+        "Japón", 
+        "Estados Unidos"
+    ],
+    "correcta": "China"
+  },
+  {
+    "texto": "¿Cuánto es la raíz cuadrada del 121?",
+    "respuestas": [
+        "7", 
+        "20",
+        "12", 
+        "11"
+    ],
+    "correcta": "11"
+  },
+  {
+    "texto": "¿Qué son los pugs?",
+    "respuestas": [
+        "Una raza de perro", 
+        "Una raza de gatos",
+        "Un tipo de sillón", 
+        "Una marca de ropa"
+    ],
+    "correcta": "Una raza de perro"
   }
 ]
